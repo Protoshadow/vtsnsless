@@ -1,0 +1,29 @@
+.slider {
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+}
+#slide-1 {
+  background-image: url('img/slika_1.jpeg');
+}
+#slide-2 {
+  background-image: url('img/slika_2.jpeg');
+}
+#slide-3 {
+  background-image: url('img/slika_3.jpeg');
+}
+#slide-4 {
+  background-image: url('img/slika_4.jpeg');
+}
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=slider.css.map */

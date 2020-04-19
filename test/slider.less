@@ -1,0 +1,26 @@
+.slider {
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+
+}
+
+.slike(4);
+
+.slike(@n, @i: 1) when (@i =< @n) {
+  #slide-@{i} {
+    background-image: url('img/slika_@{i}.jpeg');
+  }
+  .slike(@n, (@i + 1));
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

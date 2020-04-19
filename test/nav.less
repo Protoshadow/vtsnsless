@@ -1,0 +1,52 @@
+@boja-bg-def:#000;
+@font-def:'Oswald';
+
+.text-color(@a) when (lightness(@a) >= 50%){
+	color:black;
+}
+.text-color(@a) when (lightness(@a) < 50%){
+	color:white;
+}
+
+.nav{
+		 ul{
+		 	list-style: none;
+			background-color: @boja-bg-def;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		 	}
+
+         li{
+		font-family: @font-def, sans-serif;
+		font-size: 1.2em;
+		line-height: 40px;
+		height: 40px;
+         }
+
+		a{
+		text-decoration: none;
+		.text-color(@boja-bg-def);
+		display: block;
+		transition: .3s background-color;                 
+			&:hover{
+			background-color: lighten(@boja-bg-def,15%);
+			}
+			&.active {
+			background-color: lighten(@boja-bg-def,30%);
+			.text-color(@boja-bg-def);
+			cursor: default;
+			}
+		}
+	@media screen and (min-width: 600px) {
+		li {
+    	width: 120px;
+    	border-bottom: none;
+    	height: 50px;
+    	line-height: 50px;
+    	font-size: 1.4em;
+    	display: inline-block;
+    	margin-right: -4px;
+		}
+	}
+}
